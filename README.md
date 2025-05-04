@@ -1,6 +1,6 @@
 # FURIA Fan Chatbot & Website
 
-Este projeto foi desenvolvido como parte do processo seletivo de estágio em Engenharia de Software na FURIA.
+Este projeto foi desenvolvido como parte do processo seletivo de assistente em Engenharia de Software na FURIA.
 
 ## 📋 Descrição
 
