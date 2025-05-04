@@ -46,14 +46,6 @@ git clone https://github.com/jgdomingos/Experiencia-Conversacional.git
 - Seção de jogos com tabela expandível ao clicar no botão
 - Layout responsivo para telas desktop e mobile
 
-## 🔧 Como contribuir
-
-1. Fork este repositório.
-2. Crie uma branch: `git checkout -b feature/nome-da-feature`.
-3. Commit suas alterações: `git commit -m 'Adiciona nova feature'`.
-4. Push para a branch: `git push origin feature/nome-da-feature`.
-5. Abra um Pull Request.
-
 ## 📝 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
