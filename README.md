@@ -36,7 +36,7 @@ git clone https://github.com/jgdomingos/Experiencia-Conversacional.git
 
 ## 🎥 Vídeo explicativo
 
-[👉 Link para o vídeo no YouTube ou Google Drive]
+[https://drive.google.com/file/d/1_-u9KKvb8Gkar_D--NwckQVwdGIVgTdk/view?usp=sharing]
 
 ## 📖 Funcionalidades
 
