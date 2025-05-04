@@ -46,6 +46,12 @@ git clone https://github.com/jgdomingos/Experiencia-Conversacional.git
 - Seção de jogos com tabela expandível ao clicar no botão
 - Layout responsivo para telas desktop e mobile
 
+## 🔍 Referências e Suporte
+
+- Uiverse.io [https://uiverse.io/cards]
+- OneBitCode
+- W3Schools [https://www.w3schools.com/]
+
 ## 📝 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
