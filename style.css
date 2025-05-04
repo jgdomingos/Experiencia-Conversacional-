@@ -1,0 +1,863 @@
+/* Esta definindo a configuração global do site */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Define o modelo de caixa para todos os elementos */
+}
+
+/* Aqui está definindo a estilização do body do site */
+body {
+    background-color: #0f0f0f; /* Cor de fundo do site */
+    color: white; /* Cor do texto do site */
+    font-family: sans-serif; /* Fonte padrão do site */
+}
+
+/* Estilização para o header do site*/
+header {
+    display: flex; /* Usando flexbox para layout */
+    align-items: center; /* Alinhando itens verticalmente ao centro */
+    justify-content: space-between; /* Distribuindo espaço entre os itens */
+    padding: 20px 40px; /* Espaçamento interno do header */
+    background: linear-gradient(to bottom, #000, #0a0a0a); /* Gradiente de fundo do header */
+}
+
+/* Estilização para a navbar do site */
+nav {
+    display: flex; /* Usando flexbox para layout */
+    gap: 30px; /* Espaçamento entre os itens da navbar */
+}
+
+/* Estilização para os links da navbar */
+nav a {
+    color: white; /* Cor do texto dos links */
+    text-decoration: none; /* Removendo o sublinhado dos links */
+    font-size: 16px; /* Tamanho da fonte dos links */
+    transition: color 0.2s; /* Transição suave para a cor dos links */
+}
+
+/* Estilização para os links da navbar ao passar o mouse */
+nav a:hover {
+    color: #f1c40f; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilização para a seção do ChatBot */
+.chatbotSection {
+    background-color: #111; /* Cor de fundo da seção do chatbot */
+    padding: 60px 20px; /* Espaçamento interno da seção */
+    color: white; /* Cor do texto da seção */
+    text-align: center; /* Alinhando o texto ao centro */
+}
+
+/* Estilização para o título da seção do ChatBot */
+.chatContainer {
+    max-width: 700px; /* Largura máxima do container do chat */
+    margin: auto; /* Centralizando o container do chat */
+    background-color: #1c1c1c; /* Cor de fundo do container do chat */
+    padding: 0; /* Espaçamento interno do container do chat */
+    border-radius: 10px; /* Bordas arredondadas do container do chat */
+    overflow: hidden; /* Ocultando o conteúdo que ultrapassa as bordas do container */
+}
+
+/* Estilização para o header do chat */
+.chatHeader {
+    width: 100%; /* Largura total do header do chat */
+    background-color: #222; /* Cor de fundo do header do chat */
+    padding: 15px; /* Espaçamento interno do header do chat */
+    color: #fff; /* Cor do texto do header do chat */
+    font-weight: bold; /* Negrito para o texto do header do chat */
+    display: flex; /* Usando flexbox para layout */
+    gap: 10px; /* Espaçamento entre os itens do header do chat */
+    align-items: center; /* Alinhando itens verticalmente ao centro */
+    border-top-left-radius: 10px; /* Bordas arredondadas do header do chat */
+    border-top-right-radius: 10px; /* Bordas arredondadas do header do chat */
+}
+
+/* Estilização para o ícone da FURIA no header do chat */
+.iconFuria {
+    width: 30px; /* Largura do ícone da FURIA */
+}
+
+/* Estilização para o botão de fechar do chat */
+.opcaoBtn {
+    display: block; /* Exibindo como bloco para ocupar toda a largura disponível */
+    width: 100%; /* Largura total do botão */
+    max-width: 300px; /* Largura máxima do botão */
+    background-color: #333; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 16px; /* Espaçamento interno do botão */
+    border: none; /* Removendo bordas do botão */
+    border-radius: 10px; /* Bordas arredondadas do botão */
+    margin-bottom: 8px; /* Espaçamento inferior do botão */
+    text-align: left; /* Alinhando o texto à esquerda */
+    font-size: 15px; /* Tamanho da fonte do botão */
+    transition: background 0.2s; /* Transição suave para a cor de fundo do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+/* Estilização para o botão de fechar do chat ao passar o mouse */
+.opcaoBtn:hover {
+    background-color: #f1c40f; /* Cor de fundo ao passar o mouse */
+    color: #000; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilização para a área de mensagens do chat */
+.chatMsg {
+    padding: 30px; /* Espaçamento interno da mensagem */
+    display: flex; /* Usando flexbox para layout */
+    flex-direction: column; /* Direção das mensagens */
+    align-items: flex-start; /* Alinhando itens à esquerda */
+}
+
+/* Estilização para a mensagem inicial do chat */
+.msgInicial {
+    background-color: #222; /* Cor de fundo da mensagem inicial */
+    color: white; /* Cor do texto da mensagem inicial */
+    padding: 14px 18px; /* Espaçamento interno da mensagem inicial */
+    border-radius: 18px; /* Bordas arredondadas da mensagem inicial */
+    max-width: 80%; /* Largura máxima da mensagem inicial */
+    font-size: 16px; /* Tamanho da fonte da mensagem inicial */
+    line-height: 1.6; /* Altura da linha da mensagem inicial */
+    text-align: left; /* Alinhando o texto à esquerda */
+    position: relative; /* Posição relativa para o pseudo-elemento */
+    align-self: flex-start; /* Alinhando a mensagem inicial à esquerda */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Sombra da mensagem inicial */
+}
+
+/* Estilização para o triângulo da mensagem inicial */
+.msgInicial::after {
+    content: ""; /* Pseudo-elemento para criar o triângulo */
+    position: absolute; /* Posição absoluta para o triângulo */
+    bottom: 15px; /* Distância do fundo da mensagem inicial */
+    left: -10px; /* Distância da esquerda da mensagem inicial */
+    width: 0; /* Largura do triângulo */
+    height: 0; /* Altura do triângulo */
+    border-top: 8px solid transparent; /* Borda superior do triângulo */
+    border-bottom: 8px solid transparent; /* Borda inferior do triângulo */
+    border-right: 10px solid #222; /* Borda direita do triângulo */
+}
+
+/* Estilização para o container de mensagens do chat */
+.chatConversas {
+    display: flex; /* Usando flexbox para layout */
+    flex-direction: column; /* Direção das mensagens */
+    gap: 10px; /* Espaçamento entre as mensagens */
+    width: 100%; /* Largura total do container de mensagens */
+    margin-top: 20px; /* Margem superior do container de mensagens */
+}
+  
+/* BOT */
+.msgBot {
+    align-self: flex-start; /* Alinhando a mensagem do bot à esquerda */
+    background-color: #333; /* Cor de fundo da mensagem do bot */
+    color: white; /* Cor do texto da mensagem do bot */
+    padding: 12px 16px; /* Espaçamento interno da mensagem do bot */
+    border-radius: 18px; /* Bordas arredondadas da mensagem do bot */
+    max-width: 70%; /* Largura máxima da mensagem do bot */
+    position: relative; /* Posição relativa para o pseudo-elemento */
+    font-size: 15px; /* Tamanho da fonte da mensagem do bot */
+    line-height: 1.5; /* Altura da linha da mensagem do bot */
+}
+
+/* Estilização para o triângulo da mensagem do bot */
+.msgBot::after {
+    content: ""; /* Pseudo-elemento para criar o triângulo */
+    position: absolute; /* Posição absoluta para o triângulo */
+    top: 12px; /* Distância do topo da mensagem do bot */
+    left: -8px; /* Distância da esquerda da mensagem do bot */
+    width: 0; /* Largura do triângulo */
+    height: 0; /* Altura do triângulo */
+    border-top: 8px solid transparent; /* Borda superior do triângulo */
+    border-bottom: 8px solid transparent; /* Borda inferior do triângulo */
+    border-right: 8px solid #333; /* Borda direita do triângulo */
+}
+  
+/* USUÁRIO */
+.msgUser {
+    align-self: flex-end; /* Alinhando a mensagem do usuário à direita */
+    background-color: #2e86de; /* Cor de fundo da mensagem do usuário */
+    color: white; /* Cor do texto da mensagem do usuário */
+    padding: 12px 16px; /* Espaçamento interno da mensagem do usuário */
+    border-radius: 18px; /* Bordas arredondadas da mensagem do usuário */
+    max-width: 70%; /* Largura máxima da mensagem do usuário */
+    position: relative; /* Posição relativa para o pseudo-elemento */
+    font-size: 15px; /* Tamanho da fonte da mensagem do usuário */
+    line-height: 1.5; /* Altura da linha da mensagem do usuário */
+}
+
+/* Estilização para o triângulo da mensagem do usuário */
+.msgUser::after {
+    content: ""; /* Pseudo-elemento para criar o triângulo */
+    position: absolute; /* Posição absoluta para o triângulo */
+    top: 12px; /* Distância do topo da mensagem do usuário */
+    right: -8px; /* Distância da direita da mensagem do usuário */
+    width: 0; /* Largura do triângulo */
+    height: 0; /* Altura do triângulo */
+    border-top: 8px solid transparent; /* Borda superior do triângulo */
+    border-bottom: 8px solid transparent; /* Borda inferior do triângulo */
+    border-left: 8px solid #2e86de; /* Borda esquerda do triângulo */
+}
+
+/* Estilização para a mensagem de digitação do bot */
+.digitando {
+  align-self: flex-start; /* Alinhando a mensagem de digitação à esquerda */
+  background-color: #333; /* Cor de fundo da mensagem de digitação */
+  color: white; /* Cor do texto da mensagem de digitação */
+  padding: 12px 16px; /* Espaçamento interno da mensagem de digitação */
+  border-radius: 18px; /* Bordas arredondadas da mensagem de digitação */
+  max-width: 70%; /* Largura máxima da mensagem de digitação */
+  font-size: 15px; /* Tamanho da fonte da mensagem de digitação */
+  position: relative; /* Posição relativa para o pseudo-elemento */
+}
+
+/* Estilização para o triângulo da mensagem de digitação */
+.digitando::after {
+  content: ""; /* Pseudo-elemento para criar o triângulo */
+  position: absolute; /* Posição absoluta para o triângulo */
+  top: 12px; /* Distância do topo da mensagem de digitação */
+  left: -8px; /* Distância da esquerda da mensagem de digitação */
+  width: 0; /* Largura do triângulo */
+  height: 0; /* Altura do triângulo */
+  border-top: 8px solid transparent; /* Borda superior do triângulo */
+  border-bottom: 8px solid transparent; /* Borda inferior do triângulo */
+  border-right: 8px solid #333; /* Borda direita do triângulo */
+}
+
+/* Estilização para os pontos de digitação do bot */
+.dots::after {
+  content: ""; /* Pseudo-elemento para criar os pontos de digitação */
+  display: inline-block; /* Exibindo como bloco em linha */
+  width: 1em; /* Largura do pseudo-elemento */
+  text-align: left; /* Alinhando o texto à esquerda */
+  animation: dots 1.5s steps(4, end) infinite; /* Animação dos pontos de digitação */
+}
+
+/* Animação para os pontos de digitação */
+@keyframes dots {
+  0%, 20% {
+    content: ""; /* Nenhum ponto visível */
+  }
+  40% {
+    content: "."; /* Um ponto visível */
+  }
+  60% {
+    content: ".."; /* Dois pontos visíveis */
+  }
+  80%, 100% {
+    content: "..."; /* Três pontos visíveis */
+  }
+}
+
+/* Estilização para a área de entrada do chat */
+.chatInputArea {
+    display: flex; /* Usando flexbox para layout */
+    gap: 10px; /* Espaçamento entre os itens da área de entrada */
+    margin-top: 20px; /* Margem superior da área de entrada */
+}
+
+/* Estilização para o campo de entrada e botão da área de entrada */
+.chatInputArea input {
+    flex: 1; /* Ocupando o espaço restante */
+    padding: 10px; /* Espaçamento interno do campo de entrada */
+    border-radius: 8px; /* Bordas arredondadas do campo de entrada */
+    border: none; /* Removendo bordas do campo de entrada */
+    background-color: #2a2a2a; /* Cor de fundo do campo de entrada */
+    color: white; /* Cor do texto do campo de entrada */
+}
+
+/* Estilização para o campo de entrada ao focar */
+.chatInputArea button {
+    padding: 10px 16px; /* Espaçamento interno do botão */
+    background-color: #f1c40f; /* Cor de fundo do botão */
+    border: none; /* Removendo bordas do botão */
+    border-radius: 8px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    font-weight: bold; /* Negrito para o texto do botão */
+    color: #000; /* Cor do text o do botão */
+}
+
+/* Estilização para o botão ao passar o mouse */
+.chatInputArea button:hover {
+    background-color: #d4ac0d; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilização da seção da loja do site */
+#loja {
+    background-color: #0f0f0f; /* Cor de fundo da seção da loja */
+    color: white; /* Cor do texto da seção da loja */
+    padding: 50px 20px; /* Espaçamento interno da seção da loja */
+}
+
+/* Estilização para o título da loja */
+.tituloLoja {
+    text-align: center; /* Alinhando o texto ao centro */
+    margin-bottom: 40px; /* Margem inferior do título da loja */
+}
+
+/* Estilização para o container de cartas da loja */
+.cards-container {
+    display: grid; /* Usando grid para layout */
+    grid-template-columns: repeat(5, 1fr); /* Definindo 5 colunas iguais */
+    gap: 1rem; /* Espaçamento entre os itens */
+    justify-items: center;  /* Justificando os itens ao centro */
+    padding: 2rem; /* Espaçamento interno da seção */
+}
+
+/* Estilização para as cartas da loja */
+.card {
+    width: 240px; /* Largura da carta */
+    background-color: #27272a; /* Cor de fundo da carta */
+    border-radius: 1.5rem; /* Bordas arredondadas da carta */
+    color: #d4d4d8; /* Cor do texto da carta */
+    padding: 1rem; /* Espaçamento interno da carta */
+    display: flex; /* Usando flexbox para layout */
+    flex-direction: column; /* Direção dos itens da carta */
+    justify-content: space-between; /* Justificando os itens */
+    align-items: center; /* Alinhando os itens ao centro */
+    gap: 0.75rem; /* Espaçamento entre os itens */
+    transition: box-shadow 0.3s, background-color 0.3s; /* Transição suave para sombra e cor de fundo */
+}
+
+/* Estilização para as cartas da loja ao passar o mouse */
+.card:hover {
+    background-color: #1a1a1a; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.5); /* Sombra ao passar o mouse */
+}
+
+/* Estilização para a imagem da carta */
+.card-image {
+    width: 100%; /* Largura total da imagem */
+    height: 300px; /* Altura da imagem */
+    object-fit: cover; /* Ajustando a imagem para cobrir o espaço */
+    border-radius: 1rem; /* Bordas arredondadas da imagem */
+}
+
+/* Estilização para o título e descrição da carta */
+.card-title {
+    font-weight: 800; /* Negrito para o título */
+}
+
+/* Estilização para a descrição da carta */
+.card-description {
+    text-align: justify; /* Justificando o texto da descrição */
+    font-size: 0.9rem; /* Tamanho da fonte da descrição */
+    overflow: hidden; /* Ocultando o texto que ultrapassa o espaço */
+}
+
+/* Estilização para o botão da loja */
+.btnLoja {
+    text-decoration: none; /* Removendo o sublinhado do link */
+    color: #1a1a1a; /* Cor do texto do botão */
+    background-color: #f1c40f; /* Cor de fundo do botão */
+    font-weight: 800; /* Negrito para o texto do botão */
+    padding: 0.5rem 1.5rem; /* Espaçamento interno do botão */
+    border-radius: 0.75rem; /* Bordas arredondadas do botão */
+    border: none; /* Removendo bordas do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    display: inline-block; /* Exibindo como bloco em linha */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+/* Estilização para o botão da loja ao passar o mouse */
+.btnLoja:hover {
+    background-color: #1a1a1a; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilização para a seção de jogadores do time no site */
+#jogadores {
+    background-color: #0a0a0a; /* Cor de fundo da seção de jogadores */
+}
+
+/* Estilização para o título da seção de jogadores */
+.cardsContainer {
+    display: flex; /* Usando flexbox para layout */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Justificando os itens ao centro */
+    padding: 20px; /* Espaçamento interno da seção */
+}
+
+/* Estilização para as cartas dos jogadores */
+.flip-card {
+    background-color: transparent; /* Cor de fundo transparente */
+    width: 300px; /* Largura da carta */
+    height: 500px; /* Altura da carta */
+    perspective: 1000px; /* Perspectiva para o efeito 3D */
+    font-family: sans-serif; /* Fonte padrão da carta */
+}
+
+/* Estilização para o container interno da carta */
+.title {
+    font-size: 1.2em; /* Tamanho da fonte do título */
+    font-weight: 900; /* Negrito para o título */
+    text-align: center; /* Alinhando o texto ao centro */
+    margin: 0; /* Removendo margens do título */
+}
+
+/* Estilização para a informação do jogador */
+.info {
+    display: flex; /* Usando flexbox para layout */
+    justify-content: space-between; /* Justificando os itens */
+    padding: 0 10px; /* Espaçamento interno da informação */
+    font-size: 14px; /* Tamanho da fonte da informação */
+    color: #ccc; /* Cor do texto da informação */
+    margin-top: 8px; /* Margem superior da informação */
+}
+
+/* Estilização para a informação do jogador ao passar o mouse */
+.idade {
+    text-align: left; /* Alinhando o texto à esquerda */
+}
+
+/* Estilização para a informação do jogador ao passar o mouse */
+.posicao {
+    text-align: right; /* Alinhando o texto à direita */
+}
+
+/* Estilização para a imagem do jogador */
+.imagemJogador {
+    position: relative; /* Posição relativa para o pseudo-elemento */
+    width: 100%; /* Largura total da imagem do jogador */
+    height: auto; /* Altura automática da imagem do jogador */
+    min-height: 200px; /* Altura mínima da imagem do jogador */
+    border-radius: 1rem; /* Bordas arredondadas da imagem do jogador */
+    overflow: hidden; /* Ocultando o conteúdo que ultrapassa as bordas da imagem do jogador */
+    z-index: 1; /* Z-index para sobreposição */
+}
+
+/* Estilização para o efeito de sombra da imagem do jogador */
+.imagemJogador::after {
+    content: ""; /* Pseudo-elemento para criar o efeito de sombra */
+    position: absolute; /* Posição absoluta para o efeito de sombra */
+    bottom: 0; /* Distância do fundo da imagem do jogador */
+    left: 0; /* Distância da esquerda da imagem do jogador */
+    width: 100%; /* Largura total do efeito de sombra */
+    height: 140px; /* Altura do efeito de sombra */
+    background: linear-gradient(to top, #1c1c1c 0%, transparent 100%); /* Gradiente do efeito de sombra */
+    z-index: 3; /* Z-index para sobreposição */
+}
+
+/* Estilização para a imagem do jogador */
+.fotoJogador {
+    position: relative; /* Posição relativa para o pseudo-elemento */
+    width: 100%; /* Largura total da imagem do jogador */
+    height: auto; /* Altura automática da imagem do jogador */
+    max-height: 300px; /* Altura máxima da imagem do jogador */
+    object-fit: contain; /* Ajustando a imagem para caber no espaço */
+    border-radius: 1rem; /* Bordas arredondadas da imagem do jogador */
+    display: block; /* Exibindo como bloco */
+    z-index: 2; /* Z-index para sobreposição */
+}
+
+/* Estilização para o logo da FURIA */
+.logoFuria {
+    position: absolute; /* Posição absoluta para o logo da FURIA */
+    width: 100%; /* Largura total do logo da FURIA */
+    height: auto; /* Altura automática do logo da FURIA */
+    top: 50%; /* Distância do topo da imagem do jogador */
+    left: 50%; /* Distância da esquerda da imagem do jogador */
+    transform: translate(-50%, -50%); /* Centralizando o logo da FURIA */
+    opacity: 0.08; /* Opacidade do logo da FURIA */
+    z-index: -1; /* Z-index para sobreposição */
+}
+
+/* Estilização para a bandeira do jogador */
+.bandeira {
+    position: absolute; /* Posição absoluta para a bandeira */
+    top: 10px; /* Distância do topo da imagem do jogador */
+    right: 10px; /* Distância da direita da imagem do jogador */
+    width: 24px; /* Largura da bandeira */
+    height: 16px; /* Altura da bandeira */
+    border: 1px solid white; /* Borda da bandeira */
+    border-radius: 3px; /* Bordas arredondadas da bandeira */
+    z-index: 3; /* Z-index para sobreposição */
+}  
+
+/* Estilização para o container interno da carta */
+.flip-card-inner {
+    position: relative; /* Posição relativa para o efeito 3D */
+    width: 100%; /* Largura total da carta */
+    height: 100%; /* Altura total da carta */
+    text-align: center; /* Alinhando o texto ao centro */
+    transition: transform 0.8s; /* Transição suave para o efeito 3D */
+    transform-style: preserve-3d; /* Preservando o estilo 3D */
+}
+
+/* Estilização para o efeito de rotação da carta ao passar o mouse */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /* Efeito de rotação ao passar o mouse */
+}
+
+/* Estilização para a frente e verso da carta */
+.flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2); /* Sombra da carta */
+    position: absolute; /* Posição absoluta para o efeito 3D */
+    display: flex; /* Usando flexbox para layout */
+    flex-direction: column; /* Direção dos itens da carta */
+    justify-content: center; /* Justificando os itens */
+    width: 100%; /* Largura total da carta */
+    height: 100%; /* Altura total da carta */
+    -webkit-backface-visibility: hidden; /* Ocultando o verso da carta no Safari */
+    backface-visibility: hidden; /* Ocultando o verso da carta */
+    border: 2px solid #f1c40f; /* Borda da carta */
+    border-radius: 1rem; /* Bordas arredondadas da carta */
+}
+
+/* Estilização para a frente e verso da carta */
+.flip-card-front {
+    background: #1c1c1c; /* Cor de fundo da frente da carta */
+    color: #f1c40f; /* Cor do texto da frente da carta */
+}
+
+/* Estilização para o verso da carta */
+.flip-card-back {
+    background: #111; /* Cor de fundo do verso da carta */
+    color: white; /* Cor do texto do verso da carta */
+    transform: rotateY(180deg); /* Efeito de rotação do verso da carta */
+    padding: 20px; /* Espaçamento interno do verso da carta */
+    box-sizing: border-box; /* Definindo o modelo de caixa para o verso da carta */
+    display: flex; /* Usando flexbox para layout */
+    flex-direction: column; /* Direção dos itens do verso da carta */
+    align-items: stretch; /* Alinhando os itens ao longo do eixo principal */
+    justify-content: flex-start; /* Justificando os itens ao início do eixo principal */
+    overflow-y: auto; /* Permite rolagem vertical se necessário */
+    gap: 10px; /* Espaçamento entre os itens do verso da carta */
+}
+
+/* Estilização para a barra de progresso do jogador */
+.progressBar {
+    background: #333; /* Cor de fundo da barra de progresso */
+    border-radius: 4px; /* Bordas arredondadas da barra de progresso */
+    height: 8px; /* Altura da barra de progresso */
+    margin-top: 5px; /* Margem superior da barra de progresso */
+    margin-bottom: 10px; /* Margem inferior da barra de progresso */
+}
+
+/* Estilização para o preenchimento da barra de progresso */
+.progressFill {
+    height: 8px; /* Altura do preenchimento da barra de progresso */
+    background-color: #f1c40f; /* Cor de fundo do preenchimento da barra de progresso */
+    border-radius: 4px; /* Bordas arredondadas do preenchimento da barra de progresso */
+}
+
+/* Estilização para a seção de estatísticas do jogador */
+.progress-row {
+    display: flex; /* Usando flexbox para layout */
+    justify-content: space-between; /* Justificando os itens */
+    align-items: center; /* Alinhando os itens ao centro */
+}
+
+/* Estilização para o título da seção de estatísticas */
+.stat {
+    display: flex; /* Usando flexbox para layout */
+    flex-direction: column; /* Direção dos itens */
+}
+
+/* Estilização para a seção dos últimos jogos da FURIA */
+#jogos {
+    background-color: #0f0f0f; /* Cor de fundo da seção dos jogos */
+    color: white; /* Cor do texto da seção dos jogos */
+    padding: 60px 20px; /* Espaçamento interno da seção dos jogos */
+}
+
+/* Estilização para o título da seção dos jogos */
+.jogo {
+    display: block; /* Exibindo como bloco */
+    width: 100%; /* Largura total do jogo */
+    background-color: #1c1c1c; /* Cor de fundo do jogo */
+    padding: 20px; /* Espaçamento interno do jogo */
+    margin-bottom: 20px; /* Margem inferior do jogo */
+    border-radius: 10px; /* Bordas arredondadas do jogo */
+}
+
+/* Estilização para o título do jogo */
+.infoJogo {
+    display: flex; /* Usando flexbox para layout */
+    align-items: center; /* Alinhando itens verticalmente ao centro */
+    justify-content: center; /* Justificando os itens ao centro */
+    gap: 20px; /* Espaçamento entre os itens */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+}
+
+/* Estilização para o título do jogo */
+.timeBloco {
+    display: flex; /* Usando flexbox para layout */
+    align-items: center; /* Alinhando itens verticalmente ao centro */
+    gap: 6px; /* Espaçamento entre os itens */
+}
+
+/* Estilização para o título do jogo */
+.timeBloco h4,
+.data {
+    margin: 0; /* Removendo margens do título e data */
+    font-size: 16px; /* Tamanho da fonte do título e data */
+    font-weight: 500; /* Peso da fonte do título e data */
+}
+
+/* Estilização para o ícone do time */
+.iconTime {
+    width: 20px; /* Largura do ícone do time */
+    height: 20px; /* Altura do ícone do time */
+    object-fit: contain; /* Ajustando a imagem para caber no espaço */
+}
+
+/* Estilização para o botão de resumo da partida */
+.btnPartida button {
+    background-color: #2a2a2a; /* Cor de fundo do botão */
+    border: none; /* Removendo bordas do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 4px 10px; /* Espaçamento interno do botão */
+    border-radius: 4px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    font-size: 12px; /* Tamanho da fonte do botão */
+    transition: background 0.2s; /* Transição suave para a cor de fundo do botão */
+}
+
+/* Estilização para o botão de resumo da partida ao passar o mouse */
+.btnPartida button:hover {
+    background-color: #f1c40f; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilização para a tabela de resumo da partida */
+.resumoPartida {
+    max-height: 0; /* Altura máxima inicial da tabela */
+    opacity: 0; /* Opacidade inicial da tabela */
+    overflow: hidden; /* Ocultando o conteúdo que ultrapassa as bordas da tabela */
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease; /* Transição suave para a altura, opacidade e espaçamento interno */
+    padding: 0 0; /* Espaçamento interno inicial da tabela */
+}
+
+/* Estilização para a tabela de resumo da partida quando ativa */
+.jogo.ativa .resumoPartida {
+    max-height: 1000px; /* Altura máxima da tabela quando ativa */
+    opacity: 1; /* Opacidade total da tabela quando ativa */
+    padding: 15px 0; /* Espaçamento interno da tabela quando ativa */
+}
+
+/* Estilização para a tabela de resumo da partida */
+.resumoPartida table {
+    width: 100%; /* Largura total da tabela */
+    border-collapse: collapse; /* Colapsando bordas da tabela */
+    background-color: #424242; /* Cor de fundo da tabela */
+    color: #ffffff; /* Cor do texto da tabela */
+    font-size: 13px; /* Tamanho da fonte da tabela */
+}
+
+/* Estilização para os cabeçalhos e células da tabela */
+.resumoPartida th,
+.resumoPartida td {
+    padding: 8px; /* Espaçamento interno da tabela */
+    text-align: center; /* Alinhando o texto ao centro */
+    border-bottom: 1px solid #aaa; /* Borda inferior da tabela */
+}
+
+/* Estilização para os cabeçalhos da tabela */
+.resumoPartida th:first-child,
+.resumoPartida td:first-child {
+    text-align: left; /* Alinhando o texto à esquerda */
+}
+
+/* Estilização para o ícone do país na tabela */
+.resumoPartida img.iconPais {
+    width: 18px; /* Largura do ícone do país */
+    height: 12px; /* Altura do ícone do país */
+    margin-right: 6px; /* Margem direita do ícone do país */
+    vertical-align: middle; /* Alinhando verticalmente o ícone do país */
+}
+
+/* Estilização para o ícone do time na tabela */
+.resumoPartida th img,
+.resumoPartida td img {
+    vertical-align: middle; /* Alinhando verticalmente as imagens */
+}
+
+/* Estilização para o ícone do time na tabela */
+.resumoPartida td:nth-child(3) {
+    color: white; /* Cor do texto da terceira coluna */
+    font-weight: bold; /* Negrito para o texto da terceira coluna */
+}
+
+/* Estilização para a seção nossa história no site*/
+#nossaHistoria {
+    background-color: #111; /* Cor de fundo da seção nossa história */
+    color: white; /* Cor do texto da seção nossa história */
+    padding: 60px 20px; /* Espaçamento interno da seção nossa história */
+}
+
+/* Estilização para o título da seção nossa história */
+.historia {
+    max-width: 800px; /* Largura máxima da seção nossa história */
+    margin: auto; /* Centralizando a seção nossa história */
+    line-height: 1.8; /* Altura da linha da seção nossa história */
+    text-align: justify; /* Justificando o texto da seção nossa história */
+}
+
+/* Estilização para o footer do site */
+footer {
+    background-color: white; /* Cor de fundo do footer */
+    color: black; /* Cor do texto do footer */
+    padding: 50px 20px; /* Espaçamento interno do footer */
+    font-size: 14px; /* Tamanho da fonte do footer */
+}
+
+/* Estilização para o container do footer */
+.footer-patrocinadores img {
+    max-width: 100px; /* Largura máxima das imagens dos patrocinadores */
+    height: auto; /* Altura automática das imagens dos patrocinadores */
+    margin: 0 10px; /* Margem lateral das imagens dos patrocinadores */
+}
+  
+/* Estilização para o container do footer */
+.footer-patrocinadores {
+    display: flex; /* Usando flexbox para layout */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    justify-content: center; /* Justificando os itens ao centro */
+    align-items: center; /* Alinhando itens verticalmente ao centro */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px 0; /* Espaçamento interno da seção de patrocinadores */
+}
+
+/* Estilização para o container do footer */
+.footerConteudo {
+    display: flex; /* Usando flexbox para layout */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    justify-content: space-between; /* Justificando os itens */
+    gap: 40px; /* Espaçamento entre os itens */
+}
+
+/* Estilização para o container do footer */
+.footerConteudo h4 {
+    margin-bottom: 10px; /* Margem inferior do título */
+    color: #f1c40f; /* Cor do título */
+}
+
+/* Estilização para o container do footer */
+.footerConteudo ul {
+    list-style: none; /* Removendo marcadores da lista */
+    padding: 0; /* Removendo espaçamento interno da lista */
+}
+
+/* Estilização para o container do footer */
+.footerConteudo a {
+    color: black; /* Cor do texto dos links */
+    text-decoration: none; /* Removendo sublinhado dos links */
+    display: flex; /* Usando flexbox para layout */
+    align-items: center; /* Alinhando itens verticalmente ao centro */
+    gap: 10px; /* Espaçamento entre os itens */
+    margin-bottom: 6px; /* Margem inferior dos links */
+}
+
+/* Estilização para o container do footer */
+.footerConteudo a:hover {
+    text-decoration: underline; /* Sublinhando os links ao passar o mouse */
+}
+
+/* Estilização para o container do footer */
+.newsletter input {
+    background-color: #aaa; /* Cor de fundo do campo de entrada */
+    padding: 8px; /* Espaçamento interno do campo de entrada */
+    border: none; /* Removendo bordas do campo de entrada */
+    margin-right: 10px; /* Margem direita do campo de entrada */
+}
+
+/* Estilização para o container do footer */
+.newsletter button {
+    padding: 8px 12px; /* Espaçamento interno do botão */
+    background-color: #f1c40f; /* Cor de fundo do botão */
+    border: none; /* Removendo bordas do botão */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    font-weight: bold; /* Negrito para o texto do botão */
+}
+
+/* Estilização para o container do footer */
+.redesSociais img,
+.meuContato img {
+    width: 20px; /* Largura dos ícones de redes sociais e contato */
+}
+
+/* Estilização para o container do footer */
+.copyright {
+    text-align: center; /* Alinhando o texto ao centro */
+    margin-top: 30px; /* Margem superior do copyright */
+    border-top: 1px solid #222; /* Borda superior do copyright */
+    padding-top: 15px; /* Espaçamento superior do copyright */
+    font-size: 12px; /* Tamanho da fonte do copyright */
+    color: #aaa; /* Cor do texto do copyright */
+}
+
+/* RESPONSIVO PARA MOBILE M (até 375px) */
+@media (max-width: 375px) { 
+
+    .container {
+      padding: 0 10px; /* Espaçamento interno da seção */
+    }
+  
+    header {
+      flex-direction: column; /* Direção dos itens do cabeçalho */
+      align-items: center; /* Alinhando itens verticalmente ao centro */
+    }
+  
+    nav ul {
+      flex-direction: column; /* Direção dos itens do menu */
+      gap: 10px; /* Espaçamento entre os itens do menu */
+      text-align: center; /* Alinhando o texto ao centro */
+      padding: 10px 0; /* Espaçamento interno do menu */
+    }
+
+    .cards-container {
+        display: flex; /* Usando flexbox para layout */
+        flex-direction: column; /* Direção dos itens da seção */
+        gap: 20px; /* Espaçamento entre os itens */
+        width: 100%; /* Largura total da seção */
+        overflow-x: hidden; /* Ocultando o conteúdo que ultrapassa as bordas da seção */
+    }
+    
+    .card {
+        width: 100%; /* Largura total da carta */
+        max-width: 100%; /* Largura máxima da carta */
+    }
+  
+    .infoJogo {
+      flex-direction: column; /* Direção dos itens da seção */
+      gap: 10px; /* Espaçamento entre os itens */
+      align-items: center; /* Alinhando itens verticalmente ao centro */
+    }
+  
+    .btnPartida {
+      margin-top: 10px; /* Margem superior do botão */
+    }
+  
+    .flip-card {
+      width: 90%; /* Largura da carta */
+      margin: 10px auto; /* Centralizando a carta */
+    }
+  
+    .chatContainer {
+      width: 100%; /* Largura total do container de chat */
+      padding: 20px; /* Espaçamento interno do container de chat */
+    }
+  
+    footer {
+      flex-direction: column; /* Direção dos itens do footer */
+      text-align: center; /* Alinhando o texto ao centro */
+      gap: 20px; /* Espaçamento entre os itens do footer */
+    }
+  
+    footer .social-icons,
+    footer .contato-icons {
+      justify-content: center; /* Justificando os itens ao centro */
+      gap: 10px; /* Espaçamento entre os itens */
+    }
+  
+    /* Tabela do resumo da partida */
+    .resumoPartida table,
+    .resumoPartida th,
+    .resumoPartida td {
+      font-size: 12px; /* Tamanho da fonte da tabela */
+    }
+  
+    .resumoPartida img.iconPais {
+      width: 14px; /* Largura do ícone do país */
+      height: 10px; /* Altura do ícone do país */
+    }
+}

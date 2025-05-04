@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot FURIA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+    <!-- Cabeçalho do site -->
+    <header>
+
+        <nav>
+            <a href="#home">Home</a> <!-- Leva para o topo do site -->
+            <a href="#chatbot">Chatbot</a> <!-- Leva para a seção de ChatBot -->
+            <a href="#loja">Loja</a> <!-- Leva para a seção da Loja -->
+            <a href="#jogos">Jogos</a> <!-- Leva para a seção dos  resultados dos últimos jogos -->
+            <a href="#contato">Contato</a> <!-- Leva para o footer, onde tem meu contato -->
+        </nav>
+        
+    </header>
+
+    <!-- Conteúdo da página -->
+    <main>
+
+        <!-- Banner na parte superior do site -->
+        <section id="home">
+
+            <!-- Banner do site "Future Is Black "-->
+            <div class="bannerHome">
+                <img src="./Images/FutureIsBlack.png" alt="Future is Black">
+            </div>
+
+        </section>
+
+        <!-- Seção do ChatBot -->
+        <section id="chatbot" class="chatbotSection">
+
+            <!-- Conteúdo do ChatBot -->
+            <div class="chatContainer">
+
+                <!-- Header do ChatBot -->
+                <div class="chatHeader">
+                    <span>Chatbot da FURIA</span>
+                    <img src="./Images/LogoFuria.png" alt="Logo Furia" class="iconFuria">
+                </div>
+
+                <!-- Área de conversa do ChatBot -->
+                <div class="chatMsg">
+
+                    <!-- Mensagem inicial do Bot com botões (opções) para o usuário escolher -->
+                    <div class="msgInicial">
+                        E aí FURIOSO(A)!
+                        <br>O que você procura hoje por aqui?!?👀
+                        <br><br>
+                        <button class="opcaoBtn">📅 Calendário de jogos</button> <!-- Mostra qual o próximo jogo -->
+                        <button class="opcaoBtn">🧠 Curiosidades do time</button> <!-- Da curiosidades da FURIA -->
+                        <button class="opcaoBtn">📰 Últimas notícias</button> <!-- últimas nóticias da FURIA -->
+                        <button class="opcaoBtn">🛒 Recomendar produtos da loja</button> <!-- Recomenda produtos da loja -->
+                        <button class="opcaoBtn">💻 Estatísticas dos jogadores</button> <!-- Mostra algumas estatísticas dos jogadores-->
+                        <button class="opcaoBtn">🎯 Quiz FURIA</button> <!-- Mini quiz da FURIA -->
+                        <button class="opcaoBtn">🚀 Nossa história</button> <!-- Conta um pouco sobre a nossa história -->
+                    </div>
+
+                    <!-- Essa "div" vazia é onde vai ficar a resposta do usuário-->
+                    <div class="chatConversas"></div>
+                    
+                </div>
+
+                <!-- Área onde o usuário pode digitar e clicar em enviar -->
+                <div class="chatInputArea">
+                    <!-- Área para o usuário digitar -->
+                    <input type="text" id="userInput" placeholder="Digite sua mensagem..." />
+                    <!-- Botão para o usúario enviar sua resposta -->
+                    <button id="enviarBtn">Enviar</button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Seção da loja -->
+        <section id="loja">
+
+            <!-- Título da seção -->
+            <div class="tituloLoja">
+                <h2>Confira nossos produtos!</h2>
+            </div>
+            
+            <!-- Todos os produtos etão agrupados dentro de um container -->
+            <div class="cards-container">
+
+                <!-- Produto 1 Camiseta Oficial FURIA I Adidas Preta -->
+                <div class="card">
+                    <!-- Imagem do produto -->
+                    <img src="./Images/Loja/CamisetaOfcI_Frente.png" alt="Camiseta Oficial FURIA I Adidas Preta" class="card-image">
+                    <!-- Conteúdo principal do produto -->
+                    <div class="card-content">
+                        <!-- Nome do produto -->
+                        <p class="card-title">Camiseta Oficial FURIA I Adidas Preta</p>
+                    </div>
+                    <!-- Botão com link direto pra página do produto -->
+                    <a href="https://www.furia.gg/produto/camiseta-oficial-furia-adidas-preta-150265" target="_blank" class="btnLoja">COMPRE AGORA</a>
+                </div>
+            
+                <!-- Produto 2 Camiseta FURIA 1 Adidas Preta -->
+                <div class="card">
+                    <!-- Imagem do produto -->
+                    <img src="./Images/Loja/CamisetaOfcIAdidas_Frente.png" alt="Camiseta FURIA 1 Adidas Preta" class="card-image">
+                    <!-- Conteúdo principal do produto -->
+                    <div class="card-content">
+                        <!-- Nome do produto -->
+                        <p class="card-title">Camiseta FURIA 1 Adidas Preta</p>
+                    </div>
+                    <!-- Botão com link direto pra página do produto -->
+                    <a href="https://www.furia.gg/produto/camiseta-furia-adidas-preta-150263" target="_blank" class="btnLoja">COMPRE AGORA</a>
+                </div>
+            
+                <!-- Produto 3 Camiseta FURIA Oficial '24 Preta -->
+                <div class="card">
+                    <!-- Imagem do produto -->
+                    <img src="./Images/Loja/Camiseta24_Frente.png" alt="Camiseta FURIA Oficial '24" class="card-image">
+                    <!-- Conteúdo principal do produto -->
+                    <div class="card-content">
+                        <!-- Nome do produto -->
+                        <p class="card-title">Camiseta FURIA Oficial '24 Preta</p>
+                    </div>
+                    <!-- Botão com link direto pra página do produto -->
+                    <a href="https://www.furia.gg/produto/camiseta-furia-oficial-24-preta-150177" target="_blank" class="btnLoja">COMPRE AGORA</a>
+                </div>
+            
+                <!-- Produto 4 Sacochila FURIA Preta -->
+                <div class="card">
+                    <!-- Imagem do produto -->
+                    <img src="./Images/Loja/Sacochila_Frente.png" alt="Sacochila FURIA Preta" class="card-image">
+                    <!-- Conteúdo principal do produto -->
+                    <div class="card-content">
+                        <!-- Nome do produto -->
+                        <p class="card-title">Sacochila FURIA Preta</p>
+                    </div>
+                    <!-- Botão com link direto pra página do produto -->
+                    <a href="https://www.furia.gg/produto/sacochila-furia-preta-150267" target="_blank" class="btnLoja">COMPRE AGORA</a>
+                </div>
+            
+                <!-- Produto 5 Boné FURIA Preto -->
+                <div class="card">
+                    <!-- Imagem do produto -->
+                    <img src="./Images/Loja/Bone_Frente.png" alt="Boné FURIA Preto" class="card-image">
+                    <!-- Conteúdo principal do produto -->
+                    <div class="card-content">
+                        <!-- Nome do produto -->
+                        <p class="card-title">Boné FURIA Preto</p>
+                    </div>
+                    <!-- Botão com link direto pra página do produto -->
+                    <a href="https://www.furia.gg/produto/bone-furia-preto-150142" target="_blank" class="btnLoja">COMPRE AGORA</a>
+                </div>
+            
+                <!-- Produto 6 Camiseta FURIA Future Is Black Sankofa Preta -->
+                <div class="card">
+                    <!-- Imagem do produto -->
+                    <img src="./Images/Loja/CamisetaSankofa_Frente.png" alt="Camiseta FURIA Future Is Black Sankofa Preta" class="card-image">
+                    <!-- Conteúdo principal do produto -->
+                    <div class="card-content">
+                        <!-- Nome do produto -->
+                        <p class="card-title">Camiseta FURIA Future Is Black Sankofa Preta</p>
+                    </div>
+                    <!-- Botão com link direto pra página do produto -->
+                    <a href="https://www.furia.gg/produto/camiseta-furia-future-is-black-sankofa-preta-150148" target="_blank" class="btnLoja">COMPRE AGORA</a>
+                </div>
+            
+                <!-- Produto 7 Camiseta Oversized FURIA Ultras Preta -->
+                <div class="card">
+                    <!-- Imagem do produto -->
+                    <img src="./Images/Loja/CamisetaUltras_Frente.png" alt="Camiseta Oversized FURIA Ultras Preta" class="card-image">
+                    <!-- Conteúdo principal do produto -->
+                    <div class="card-content">
+                        <!-- Nome do produto -->
+                        <p class="card-title">Camiseta Oversized FURIA Ultras Preta</p>
+                    </div>
+                    <!-- Botão com link direto pra página do produto -->
+                    <a href="https://www.furia.gg/produto/camiseta-oversized-furia-ultras-preta-150262" target="_blank" class="btnLoja">COMPRE AGORA</a>
+                </div>
+            
+                <!-- Produto 8 Camiseta Oversized FURIA X Zor Preta Estonada -->
+                <div class="card">
+                    <!-- Imagem do produto -->
+                    <img src="./Images/Loja/CamisetaOversized_Frente.png" alt="Camiseta Oversized FURIA X Zor Preta Estonada" class="card-image">
+                    <!-- Conteúdo principal do produto -->
+                    <div class="card-content">
+                        <!-- Nome do produto -->
+                        <p class="card-title">Camiseta Oversized FURIA X Zor Preta Estonada</p>
+                    </div>
+                    <!-- Botão com link direto pra página do produto -->
+                    <a href="https://www.furia.gg/produto/camiseta-oversized-furia-x-zor-preta-estonada-150241" target="_blank" class="btnLoja">COMPRE AGORA</a>
+                </div>
+            
+                <!-- Produto 9 Moletom Oversized FURIA X Zor Chumbo -->
+                <div class="card">
+                    <!-- Imagem do produto -->
+                    <img src="./Images/Loja/MoletomChumbo_Frente.png" alt="Moletom Oversized FURIA X Zor Chumbo" class="card-image">
+                    <!-- Conteúdo principal do produto -->
+                    <div class="card-content">
+                        <!-- Nome do produto -->
+                        <p class="card-title">Moletom Oversized FURIA X Zor Chumbo</p>
+                    </div>
+                    <!-- Botão com link direto pra página do produto -->
+                    <a href="https://www.furia.gg/produto/moletom-oversized-furia-x-zor-chumbo-150247" target="_blank" class="btnLoja">COMPRE AGORA</a>
+                </div>
+            
+                <!-- Produto 10 Moletom Careca FURIA Future Is Black Preto -->
+                <div class="card">
+                    <!-- Imagem do produto -->
+                    <img src="./Images/Loja/MoletomCareca_Frente.png" alt="Moletom Careca FURIA Future Is Black Preto" class="card-image">
+                    <!-- Conteúdo principal do produto -->
+                    <div class="card-content">
+                        <!-- Nome do produto -->
+                        <p class="card-title">Moletom Careca FURIA Future Is Black Preto</p>
+                    </div>
+                    <!-- Botão com link direto pra página do produto -->
+                    <a href="https://www.furia.gg/produto/moletom-careca-furia-future-is-black-preto-150151" target="_blank" class="btnLoja">COMPRE AGORA</a>
+                </div>
+            
+            </div>
+            
+        </section>
+
+        <!-- Seção dos Jogadores da FURIA com estatística -->
+        <section id="jogadores">
+
+            <!-- Todos os cards dos jogadores agrupados dentro de um container -->
+            <div class="cardsContainer">
+
+                <!-- Yekindar -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+
+                        <!-- Parte da Frente do Card -->
+                        <div class="flip-card-front">
+                        <!-- Área com a logo da FURIA, imagem do jogador e a bandeira do país dele -->
+                        <div class="imagemJogador">
+                            <img src="./Images/LogoFuria.png" alt="Logo Furia" class="logoFuria">
+                            <img src="./Images/Jogadores/Yekindar.png" alt="Yekindar" class="fotoJogador">
+                            <img src="./Images/Bandeiras/Letonia.png" alt="Letonia" class="bandeira">
+                        </div>
+                            <!-- Aqui tem informações básicas do jogador (nome e nickname, idade e posição) -->
+                            <p class="title">Mareks 'Yekindar' Galinskis</p>
+                            <!-- Idade e posição está agrupadas em um parágrafo -->
+                            <p class="info">
+                                <span class="idade">25 Anos</span> <!-- Idade -->
+                                <span class="posicao">Entry Fragger</span> <!-- Posição -->
+                            </p>
+                        </div>
+                        
+                        <!-- Parte de tras do Card -->
+                        <div class="flip-card-back">
+                            
+                            <!-- Rating -->
+                            <div class="stat rating">
+                                <span class="stateNome">Rating</span>
+                                <span class="stateValor">1.13</span>
+                            </div>
+            
+                            <!-- Firepower -->
+                            <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Firepower</span>
+                                    <span class="statValor">70/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 70%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Entrying -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Entrying</span>
+                                    <span class="statValor">16/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 16%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Trading -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Trading</span>
+                                    <span class="statValor">8/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 8%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Opening -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Opening</span>
+                                    <span class="statValor">82/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 82%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Clutching -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Clutching</span>
+                                    <span class="statValor">34/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 34%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Sniping -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Snipingr</span>
+                                    <span class="statValor">2/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 2%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Utility-->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Utility</span>
+                                    <span class="statValor">28/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 28%;"></div>
+                                </div>
+                             </div>
+            
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Yuurih -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+
+                        <!-- Parte da Frente do Card -->
+                        <div class="flip-card-front">
+                        <!-- Área com a logo da FURIA, imagem do jogador e a bandeira do país dele -->
+                        <div class="imagemJogador">
+                            <img src="./Images/LogoFuria.png" alt="Logo Furia" class="logoFuria">
+                            <img src="./Images/Jogadores/Yuurih.png" alt="Yuurih" class="fotoJogador">
+                            <img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="bandeira">
+                        </div>
+                            <!-- Aqui tem informações básicas do jogador (nome e nickname, idade e posição) -->
+                            <p class="title">Yuri 'Yuurih' Santos</p>
+                            <!-- Idade e posição está agrupadas em um parágrafo -->
+                            <p class="info">
+                                <span class="idade">25 Anos</span> <!-- Idade -->
+                                <span class="posicao">Rifler</span> <!-- Posição -->
+                            </p>
+                        </div>
+                        
+                        <!-- Parte de tras do Card -->
+                        <div class="flip-card-back">
+                            
+                            <!-- Rating -->
+                            <div class="stat rating">
+                                <span class="stateNome">Rating</span>
+                                <span class="stateValor">1.07</span>
+                            </div>
+            
+                            <!-- Firepower -->
+                            <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Firepower</span>
+                                    <span class="statValor">56/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 56%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Entrying -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Entrying</span>
+                                    <span class="statValor">53/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 53%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Trading -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Trading</span>
+                                    <span class="statValor">68/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 68%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Opening -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Opening</span>
+                                    <span class="statValor">27/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 27%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Clutching -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Clutching</span>
+                                    <span class="statValor">32/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 32%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Sniping -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Snipingr</span>
+                                    <span class="statValor">0/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 0%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Utility-->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Utility</span>
+                                    <span class="statValor">80/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 80%;"></div>
+                                </div>
+                             </div>
+            
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Fallen -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+
+                        <!-- Parte da Frente do Card -->
+                        <div class="flip-card-front">
+                        <!-- Área com a logo da FURIA, imagem do jogador e a bandeira do país dele -->
+                        <div class="imagemJogador">
+                            <img src="./Images/LogoFuria.png" alt="Logo Furia" class="logoFuria">
+                            <img src="./Images/Jogadores/Fallen.png" alt="FalleN" class="fotoJogador">
+                            <img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="bandeira">
+                        </div>
+                            <!-- Aqui tem informações básicas do jogador (nome e nickname, idade e posição) -->
+                            <p class="title">Gabriel 'FalleN' Toledo</p>
+                            <!-- Idade e posição está agrupadas em um parágrafo -->
+                            <p class="info">
+                                <span class="idade">33 Anos</span> <!-- Idade -->
+                                <span class="posicao">AWPer / IGL</span> <!-- Posição -->
+                            </p>
+                        </div>
+            
+                        <!-- Parte de tras do Card -->
+                        <div class="flip-card-back">
+                            <!-- Rating -->
+                            <div class="stat rating">
+                                <span class="stateNome">Rating</span>
+                                <span class="stateValor">0.95</span>
+                            </div>
+            
+                            <!-- Firepower -->
+                            <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Firepower</span>
+                                    <span class="statValor">29/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 29%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Entrying -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Entrying</span>
+                                    <span class="statValor">38/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 38%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Trading -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Trading</span>
+                                    <span class="statValor">25/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 25%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Opening -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Opening</span>
+                                    <span class="statValor">59/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 59%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Clutching -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Clutching</span>
+                                    <span class="statValor">51/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 51%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Sniping -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Sniping</span>
+                                    <span class="statValor">93/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 93%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Utility -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Utility</span>
+                                    <span class="statValor">60/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 60%;"></div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Kscerato -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+
+                        <!-- Parte da Frente do Card -->
+                        <div class="flip-card-front">
+                        <!-- Área com a logo da FURIA, imagem do jogador e a bandeira do país dele -->
+                        <div class="imagemJogador">
+                            <img src="./Images/LogoFuria.png" alt="Logo Furia" class="logoFuria">
+                            <img src="./Images/Jogadores/Kscerato.png" alt="Kscerato" class="fotoJogador">
+                            <img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="bandeira">
+                        </div>
+                            <!-- Aqui tem informações básicas do jogador (nome e nickname, idade e posição) -->
+                            <p class="title">Kaike 'Kscerato' Cerato</p>
+                            <!-- Idade e posição está agrupadas em um parágrafo -->
+                            <p class="info">
+                                <span class="idade">25 Anos</span> <!-- Idade -->
+                                <span class="posicao">Rifler</span> <!-- Posição -->
+                            </p>
+                        </div>
+                        
+                        <!-- Parte de tras do Card -->
+                        <div class="flip-card-back">
+                            
+                            <!-- Rating -->
+                            <div class="stat rating">
+                                <span class="stateNome">Rating</span>
+                                <span class="stateValor">1.17</span>
+                            </div>
+            
+                            <!-- Firepower -->
+                            <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Firepower</span>
+                                    <span class="statValor">87/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 87%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Entrying -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Entrying</span>
+                                    <span class="statValor">23/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 23%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Trading -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Trading</span>
+                                    <span class="statValor">53/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 53%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Opening -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Opening</span>
+                                    <span class="statValor">49/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 49%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Clutching -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Clutching</span>
+                                    <span class="statValor">79/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 79%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Sniping -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Snipingr</span>
+                                    <span class="statValor">1/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 1%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Utility-->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Utility</span>
+                                    <span class="statValor">91/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 91%;"></div>
+                                </div>
+                             </div>
+            
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Molodoy -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+
+                        <!-- Parte da Frente do Card -->
+                        <div class="flip-card-front">
+                        <!-- Área com a logo da FURIA, imagem do jogador e a bandeira do país dele -->
+                        <div class="imagemJogador">
+                            <img src="./Images/LogoFuria.png" alt="Logo Furia" class="logoFuria">
+                            <img src="./Images/Jogadores/Molodoy.png" alt="Molodoy" class="fotoJogador">
+                            <img src="./Images/Bandeiras/Kazakhstan.png" alt="Kazakhstan" class="bandeira">
+                        </div>
+                            <!-- Aqui tem informações básicas do jogador (nome e nickname, idade e posição) -->
+                            <p class="title">Danil 'Molodoy' Golubenko</p>
+                            <!-- Idade e posição está agrupadas em um parágrafo -->
+                            <p class="info">
+                                <span class="idade">22 Anos</span> <!-- Idade -->
+                                <span class="posicao">AWPer</span> <!-- Posição -->
+                            </p>
+                        </div>
+                        
+                        <!-- Parte de tras do Card -->
+                        <div class="flip-card-back">
+                            
+                            <!-- Rating -->
+                            <div class="stat rating">
+                                <span class="stateNome">Rating</span>
+                                <span class="stateValor">1.22</span>
+                            </div>
+            
+                            <!-- Firepower -->
+                            <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Firepower</span>
+                                    <span class="statValor">95/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 95%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Entrying -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Entrying</span>
+                                    <span class="statValor">2/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 2%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Trading -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Trading</span>
+                                    <span class="statValor">18/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 18%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Opening -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Opening</span>
+                                    <span class="statValor">77/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 77%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Clutching -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Clutching</span>
+                                    <span class="statValor">85/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 85%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Sniping -->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Snipingr</span>
+                                    <span class="statValor">95/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 95%;"></div>
+                                </div>
+                             </div>
+            
+                             <!-- Utility-->
+                             <div class="stat">
+                                <div class="progress-row">
+                                    <span class="statNome">Utility</span>
+                                    <span class="statValor">57/100</span>
+                                </div>
+                                <div class="progressBar">
+                                    <div class="progressFill" style="width: 57%;"></div>
+                                </div>
+                             </div>
+            
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+
+        </section>
+
+        <!-- Seção de resultado dos últimos jogos -->
+        <section id="jogos">
+
+            <!-- Contra The MongolZ -->
+            <div class="jogo">
+
+                <div class="infoJogo">
+
+                    <div class="timeBloco">
+                        <p class="data">09/04/2025</p>
+                    </div>
+
+                    <div class="timeBloco">
+                        <h4>FURIA</h4>
+                        <img src="./Images/LogoFuria.png" alt="Logo Furia" class="iconTime">
+                    </div>
+
+                    <div class="placar">
+                        <span>0</span> : <span>2</span>
+                    </div>
+    
+                    <div class="timeBloco">
+                        <img src="./Images/Times/TheMongolz.png" alt="Logo The MongolZ" class="iconTime">
+                        <h4>The MongolZ</h4>
+                    </div>
+
+                    <!-- Botão do resumo da partida -->
+                    <div class="btnPartida">
+                        <button>Partida</button>
+                    </div>
+                    
+                </div>
+
+                <div class="resumoPartida">
+                    <table>
+                        <tr>
+                            <th><img src="./Images/LogoFuria.png" alt="Logo Fuira" style="width:20px; height:auto; vertical-align:middle;">FURIA</th>
+                            <th>K-D</th>
+                            <th>+/-</th>
+                            <th>ADR</th>
+                            <th>KAST</th>
+                            <th>Rating 2.1</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Yuri 'Yuurih' Santos</td>
+                            <td>37-33</td>
+                            <td>+4</td>
+                            <td>101.0</td>
+                            <td>78.3%</td>
+                            <td>1.25</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Kaike 'Kscerato' Cerato</td>
+                            <td>40-34</td>
+                            <td>+6</td>
+                            <td>80.1</td>
+                            <td>76.1%</td>
+                            <td>1.10</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Marcelo 'Chelo' Cespedes</td>
+                            <td>24-35</td>
+                            <td>-11</td>
+                            <td>56.8</td>
+                            <td>67.4%</td>
+                            <td>0.81</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Felipe 'Skullz' Medeiros</td>
+                            <td>21-32</td>
+                            <td>-11</td>
+                            <td>60.3</td>
+                            <td>63.0%</td>
+                            <td>0.73</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Gabriel 'FalleN' Toledo</td>
+                            <td>22-31</td>
+                            <td>-9</td>
+                            <td>52.7</td>
+                            <td>65.2%</td>
+                            <td>0.73</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Contra Virtus.pro -->
+            <div class="jogo">
+
+                <div class="infoJogo">
+
+                    <div class="timeBloco">
+                        <p class="data">08/04/2025</p>
+                    </div>
+
+                    <div class="timeBloco">
+                        <h4>FURIA</h4>
+                        <img src="./Images/LogoFuria.png" alt="Logo Furia" class="iconTime">
+                    </div>
+
+                    <div class="placar">
+                        <span>0</span> : <span>2</span>
+                    </div>
+    
+                    <div class="timeBloco">
+                        <img src="./Images/Times/VirtusPro.png" alt="Logo Virtus.pro" class="iconTime">
+                        <h4>Virtus.pro</h4>
+                    </div>
+
+                    <!-- Botão do resumo da partida -->
+                    <div class="btnPartida">
+                        <button>Partida</button>
+                    </div>
+
+
+                </div>
+
+                <div class="resumoPartida">
+                    <table>
+                        <tr>
+                            <th><img src="./Images/LogoFuria.png" alt="Logo Fuira" style="width:20px; height:auto; vertical-align:middle;">FURIA</th>
+                            <th>K-D</th>
+                            <th>+/-</th>
+                            <th>ADR</th>
+                            <th>KAST</th>
+                            <th>Rating 2.1</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Yuri 'Yuurih' Santos</td>
+                            <td>20-29</td>
+                            <td>-9</td>
+                            <td>55.3</td>
+                            <td>71.1%</td>
+                            <td>0.82</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Kaike 'Kscerato' Cerato</td>
+                            <td>31-28</td>
+                            <td>+3</td>
+                            <td>80.5</td>
+                            <td>71.1%</td>
+                            <td>1.11</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Marcelo 'Chelo' Cespedes</td>
+                            <td>27-31</td>
+                            <td>-4</td>
+                            <td>61.9</td>
+                            <td>71.1%</td>
+                            <td>0.97</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Felipe 'Skullz' Medeiros</td>
+                            <td>16-28</td>
+                            <td>-12</td>
+                            <td>39.5</td>
+                            <td>66.7%</td>
+                            <td>0.64</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Gabriel 'FalleN' Toledo</td>
+                            <td>27-34</td>
+                            <td>-7</td>
+                            <td>63.2</td>
+                            <td>62.2%</td>
+                            <td>0.82</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Contra VComplexity -->
+            <div class="jogo">
+
+                <div class="infoJogo">
+
+                    <div class="timeBloco">
+                        <p class="datta">07/04/2025</p>
+                    </div>
+
+                    <div class="timeBloco">
+                        <h4>FURIA</h4>
+                        <img src="./Images/LogoFuria.png" alt="Logo Furia" class="iconTime">
+                    </div>
+
+                    <div class="placar">
+                        <span>1</span> : <span>2</span>
+                    </div>
+    
+                    <div class="timeBloco">
+                        <img src="./Images/Times/Complexity.png" alt="Logo Virtus.pro" class="iconTime">
+                        <h4>Complexity</h4>
+                    </div>
+
+                    <!-- Botão do resumo da partida -->
+                    <div class="btnPartida">
+                        <button>Partida</button>
+                    </div>
+
+                </div>
+
+                <div class="resumoPartida">
+                    <table>
+                        <tr>
+                            <th><img src="./Images/LogoFuria.png" alt="Logo Fuira" style="width:20px; height:auto; vertical-align:middle;">FURIA</th>
+                            <th>K-D</th>
+                            <th>+/-</th>
+                            <th>ADR</th>
+                            <th>KAST</th>
+                            <th>Rating 2.1</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Yuri 'Yuurih' Santos</td>
+                            <td>32-41</td>
+                            <td>-9</td>
+                            <td>72.7</td>
+                            <td>65.4%</td>
+                            <td>0.94</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Kaike 'Kscerato' Cerato</td>
+                            <td>33-37</td>
+                            <td>-4</td>
+                            <td>88.2</td>
+                            <td>63.5%</td>
+                            <td>1.09</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Marcelo 'Chelo' Cespedes</td>
+                            <td>33-40</td>
+                            <td>-7</td>
+                            <td>65.8</td>
+                            <td>65.4%</td>
+                            <td>0.92</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Felipe 'Skullz' Medeiros</td>
+                            <td>27-44</td>
+                            <td>-17</td>
+                            <td>62.9</td>
+                            <td>65.4%</td>
+                            <td>0.70</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Gabriel 'FalleN' Toledo</td>
+                            <td>25-41</td>
+                            <td>-16</td>
+                            <td>48.2</td>
+                            <td>57.7%</td>
+                            <td>0.64</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Contra Betclic -->
+            <div class="jogo">
+
+                <div class="infoJogo">
+
+                    <div class="timeBloco">
+                        <p class="data">06/04/2025</p>
+                    </div>
+
+                    <div class="timeBloco">
+                        <h4>FURIA</h4>
+                        <img src="./Images/LogoFuria.png" alt="Logo Furia" class="iconTime">
+                    </div>
+
+                    <div class="placar">
+                        <span>2</span> : <span>0</span>
+                    </div>
+    
+                    <div class="timeBloco">
+                        <img src="./Images/Times/BetclicApogee.png" alt="Logo Betclic" class="iconTime">
+                        <h4>Betclic</h4>
+                    </div>
+
+                    <!-- Botão do resumo da partida -->
+                    <div class="btnPartida">
+                        <button>Partida</button>
+                    </div>
+
+                </div>
+
+                <div class="resumoPartida">
+                    <table>
+                        <tr>
+                            <th><img src="./Images/LogoFuria.png" alt="Logo Fuira" style="width:20px; height:auto; vertical-align:middle;">FURIA</th>
+                            <th>K-D</th>
+                            <th>+/-</th>
+                            <th>ADR</th>
+                            <th>KAST</th>
+                            <th>Rating 2.1</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Yuri 'Yuurih' Santos</td>
+                            <td>30-18</td>
+                            <td>+12</td>
+                            <td>93.4</td>
+                            <td>92.3%</td>
+                            <td>1.47</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Kaike 'Kscerato' Cerato</td>
+                            <td>40-20</td>
+                            <td>+20</td>
+                            <td>103.4</td>
+                            <td>89.7%</td>
+                            <td>1.64</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Marcelo 'Chelo' Cespedes</td>
+                            <td>20-20</td>
+                            <td>0</td>
+                            <td>58.0</td>
+                            <td>74.4%</td>
+                            <td>1.00</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Felipe 'Skullz' Medeiros</td>
+                            <td>19-18</td>
+                            <td>+1</td>
+                            <td>53.4</td>
+                            <td>71.8%</td>
+                            <td>0.85</td>
+                        </tr>
+                        <tr>
+                            <td><img src="./Images/Bandeiras/Brasil.jpg" alt="Brasil" class="iconPais">Gabriel 'FalleN' Toledo</td>
+                            <td>33-21</td>
+                            <td>+12</td>
+                            <td>86.6</td>
+                            <td>82.1%</td>
+                            <td>1.38</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Seção sobre a nossa história -->
+        <section id="nossaHistoria">
+            
+            <div class="historia">
+                <h2>Nossa História</h2>
+                <p>
+                    Somos a FURIA. Uma organização de esports que nasceu do desejo de representar o Brasil no cenário competitivo de Counter-Strike, 
+                    mas que conquistou muito mais ao longo da jornada. Expandimos para diversas ligas, disputamos os principais títulos mundiais 
+                    e adotamos novos objetivos, construindo um propósito ainda maior.
+                </p>
+                <p>
+                    Mais do que o sucesso competitivo, a FURIA se tornou um verdadeiro movimento sociocultural. 
+                    Nossa história é feita de pioneirismo, grandes conquistas e tradição. Nosso presente é impulsionado 
+                    pela paixão, garra e estratégia. E o futuro é representado pela pantera estampada em nossos peitos, símbolo de glória e determinação.
+                </p>
+                <p>
+                    A FURIA é construída sobre pilares sólidos: performance, lifestyle, conteúdo, negócios, tecnologia e responsabilidade social. 
+                    Somos uma unidade que respeita as individualidades e busca impactar positivamente os contextos em que atuamos. 
+                    Unimos pessoas e alimentamos sonhos, dentro e fora dos jogos.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Área do footer da página -->
+    <footer id="footer">
+
+        <!-- Área para se colocar todos os patrocinadores da FURIA-->
+        <div class="footer-patrocinadores">
+            <img src="./Images/Patrocinadores/Adidas.png" alt="Adidas">
+            <img src="./Images/Patrocinadores/CruzeiroDoSulVirtual.png" alt="Cruzeiro do Sul Virtual">
+            <img src="./Images/Patrocinadores/LenovoLegion.png" alt="Lenovo Legion">
+            <img src="./Images/Patrocinadores/Pokerstars.png" alt="PokerStars">
+            <img src="./Images/Patrocinadores/RedBull.png" alt="Red Bull">
+            <img src="./Images/Patrocinadores/Hellmanns.png" alt="Hellmann's">
+        </div>
+    
+        <div class="linha"></div>
+    
+        <!-- Aqui está todo o conteúdo do Footer -->
+        <div class="footerConteudo">
+
+            <!-- Área de cadastro para receber novidades e lançamentos -->
+            <div class="newsletter">
+                <h4>SEJA O PRIMEIRO A RECEBER NOSSOS LANÇAMENTOS E NOVIDADES:</h4>
+                <form>
+                    <input type="email" placeholder="Seu e-mail">
+                    <button type="submit">→</button>
+                </form>
+            </div>
+    
+            <!-- Área de navegação rápida -->
+            <div class="informacoes">
+                <h4>INFORMAÇÕES</h4>
+                <ul>
+                    <li><a href="#chatbot">ChatBot</a></li>
+                    <li><a href="https://www.furia.gg/" target="_blank">Loja</a></li>
+                    <li><a href="#jogadores">Jogadores</a></li>
+                    <li><a href="#jogos">Jogos Recentes</a></li>
+                    <li><a href="#nossaHistoria">Nossa História</a></li>
+                </ul>
+            </div>
+    
+            <!-- Termos e políticas do site -->
+            <div class="politicas">
+                <h4>POLÍTICAS</h4>
+                <ul>
+                    <li><a href="#">Termos e Condições</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                </ul>
+            </div>
+    
+            <!-- Meu contato pessoal para ficar mais fácil o contato -->
+            <div class="meuContato">
+                <h4>CONTATO</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/jgsdomingos/" target="_blank">
+                            <img src="./Images/RedesSociais/Linkedin.png" alt="LinkedIn">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jgdomingos" target="_blank">
+                            <img src="./Images/RedesSociais/GitHub.png" alt="GitHub">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:jgsdomingoss@gmail.com">
+                            <img src="./Images/RedesSociais/Email.png" alt="E-mail">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/+5511999477172">
+                            <img src="./Images/RedesSociais/Whatsapp.png" alt="Telefone">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Redes sociais da FURIA -->
+            <div class="redesSociais">
+                <h4>SIGA FURIA</h4>
+                <a href="https://www.instagram.com/furiagg" target="_blank">
+                    <img src="./Images/RedesSociais/Instagram.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com/furia" target="_blank">
+                    <img src="./Images/RedesSociais/X.png" alt="X">
+                </a>
+            </div>
+        </div>
+    
+        <!-- Meus créditos no site -->
+        <div class="copyright">
+            <p>© 2025 FURIA. All Rights Reserved.</p>
+            <p>Desenvolvido por: João Guilherme Silva Domingos</p>
+        </div>
+
+    </footer>
+
+    </div>
+
+    <!-- Estou incluindo o arquivo JS -->
+    <script src="index.js"></script>
+
+</body>
+</html>
