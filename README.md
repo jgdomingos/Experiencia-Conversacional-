@@ -16,9 +16,7 @@ Um site interativo com:
 
 - HTML5
 - CSS3
-- JavaScript (vanilla)
-- Flexbox
-- Media Queries
+- JavaScript
 
 ## 🏗 Estrutura do projeto
 
